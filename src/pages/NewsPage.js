@@ -12,13 +12,9 @@ const NewsPage = (props) => {
 
    async function getTopHeadlines(){
        setLoading(true);
-      //  const response = await axios.get(
-      //   `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${process.env.REACT_APP_API_KEY}&page=${page}&pageSize=${props.pageSize}`
-      //  );
        const response = await axios.get(
-        `https://newsdata.io/api/top-headlines?country=${props.country}&category=${props.category}&apiKey="pub_7743ae52a829c18e54592c19d72ce6df1484"&page=${page}&pageSize=${props.pageSize}`
+        `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${process.env.REACT_APP_API_KEY}&page=${page}&pageSize=${props.pageSize}`
        );
-       https://newsdata.io/api/1/news?apikey=pub_7743ae52a829c18e54592c19d72ce6df1484&language=en
 
 
        if (response.data.status === "ok") {
