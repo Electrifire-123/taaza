@@ -15,6 +15,7 @@ const NewsPage = (props) => {
        const response = await axios.get(
         `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${process.env.REACT_APP_API_KEY}&page=${page}&pageSize=${props.pageSize}`
        );
+       console.log(response)
 
 
        if (response.data.status === "ok") {
@@ -38,7 +39,6 @@ const NewsPage = (props) => {
    }
    useEffect(() => {
     getTopHeadlines();
-   
    }, [])
 
    useEffect(() => {

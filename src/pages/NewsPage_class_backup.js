@@ -42,7 +42,6 @@ export class NewsPage extends Component {
   }
 
   componentDidUpdate(prevProps, prevState){
-
       if(prevProps && prevProps.category !== this.props.category){
           this.getTopHeadlines();
       }
@@ -53,7 +52,7 @@ export class NewsPage extends Component {
   }
 
   render() {
-    const { loading, data, error, page } = this.state;
+    const { loading, data, error, page } = this.state; 
     // console.log(page);
     if (error) {
       return <h2>Error! Something went wrong...</h2>;

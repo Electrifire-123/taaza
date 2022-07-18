@@ -7,13 +7,14 @@ import NewsPage from "./pages/NewsPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default class App extends Component {
+
   render() {
     return (
       <BrowserRouter>
         <Routes>
           {/* Version 6 code  */}
           <Route path="/" element={<HomePage />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route exact path="/contact" element={<Contact />} />
           <Route
             exact
             path="/general"
@@ -33,7 +34,7 @@ export default class App extends Component {
             path="/entertainment"
             element={
               <NewsPage
-              key="entertainment"
+                key="entertainment"
                 category="entertainment"
                 country="us"
                 page={1}
@@ -46,7 +47,13 @@ export default class App extends Component {
             exact
             path="/health"
             element={
-              <NewsPage key="health" category="health" country="us" page={1} pageSize={10} />
+              <NewsPage
+                key="health"
+                category="health"
+                country="us"
+                page={1}
+                pageSize={10}
+              />
             }
           />
 
@@ -55,7 +62,12 @@ export default class App extends Component {
             path="/sports"
             element={
               <NewsPage
-              key="sports" category="sports" country="us" page={1} pageSize={10} />
+                key="sports"
+                category="sports"
+                country="us"
+                page={1}
+                pageSize={10}
+              />
             }
           />
 
@@ -64,7 +76,7 @@ export default class App extends Component {
             path="/technology"
             element={
               <NewsPage
-              key="technology"
+                key="technology"
                 category="technology"
                 country="us"
                 page={1}

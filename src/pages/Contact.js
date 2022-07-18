@@ -33,10 +33,13 @@ const Contact = () => {
         setUser({...user, [e.target.name]: e.target.value});
        
       }
+      
+      
 
     const handleSubmit = (e) => {
         e.preventDefault();
         // console.log(user, interest);
+        // logic
         setUser({
           fName: '',
           lName: '', 

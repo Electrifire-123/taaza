@@ -67,6 +67,7 @@ export class Contact extends Component {
     console.log(this.state);
     return (
       <Layout>
+        
         <div className="contact-page">
           <div className="form">
             <form onSubmit={this.handleSubmit}
